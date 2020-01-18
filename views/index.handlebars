@@ -1,0 +1,32 @@
+<img src="assets/img/burgerImage.png" alt="Burger" class="center">
+
+<h1>Music genres with descriptions!</h1>
+
+<h2>genre</h2>
+
+<ol>
+  {{#each genre}}
+    {{#each description}}
+      <li>
+	        {{genre_name}} 
+          <button class="add-comment" data-id="{{id}}" data-newDescription="{{description}}">
+		        Add comment!!
+	        </button>
+      </li> 
+    {{/unless}}
+  {{/each}}
+</ol>
+
+
+<h2>Add a Genre</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="genreName" class="center">Genre Name:</label>
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="center" id="genreName" name="genre_name" description="false">
+  </div>
+  <button type="submit" id="submitBtn">Submit</button>
+</form>
