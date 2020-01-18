@@ -2,20 +2,26 @@
 
 <h1>Music genres with descriptions!</h1>
 
-<h2>genre</h2>
+<h2>Music Genre</h2>
 
-<ol>
+<h3>
   {{#each genre}}
-    {{#each description}}
-      <li>
-	        {{genre_name}} 
-          <button class="add-comment" data-id="{{id}}" data-newDescription="{{description}}">
-		        Add comment!!
-	        </button>
-      </li> 
-    {{/unless}}
+  <h3>
+    <h4>Genre Name:</h4>
+    {{genre_name}}
+    <h4>Description:</h4>
+    {{description}}
+    <h4>Comments:</h4>
+    {{comment}}
+  </h3>
+  <br>
+  <br>
+  <label for="addComment" class="left">Add Comment:</label>
+  <input type="text" class="left" id="newComment" name="newComment">
+  <button type="submit" class="addCommentsBtn" data-id="{{this.id}}">Submit</button>
+  <hr>
   {{/each}}
-</ol>
+</h3>
 
 
 <h2>Add a Genre</h2>
@@ -23,10 +29,32 @@
 
   <div class="form-group">
     <label for="genreName" class="center">Genre Name:</label>
+    <input type="text" class="center" id="genreName" name="genre_name">
+    <label for="description" class="center">Description:</label>
+    <input type="text" class="center" id="genreDescription" name="description">
+    <label for="comment" class="center">Comment:</label>
+    <input type="text" class="center" id="genreComment" name="comment">
+  </div>
+
+  {{!-- <div class="form-group">
+    <input type="text" class="center" id="genreName" name="genre_name">
   </div>
 
   <div class="form-group">
-    <input type="text" class="center" id="genreName" name="genre_name" description="false">
+    <label for="description" class="center">Description:</label>
   </div>
+
+  <div class="form-group">
+    <input type="text" class="center" id="genreDescription" name="genre_description">
+  </div>
+
+  <div class="form-group">
+    <label for="comment" class="center">Comment:</label>
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="center" id="genreComment" name="genre_comment">
+  </div> --}}
+
   <button type="submit" id="submitBtn">Submit</button>
 </form>

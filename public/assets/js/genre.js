@@ -1,19 +1,19 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-    $(".change-devour").on("click", function(event) {
+    $(".add-comment").on("click", function(event) {
       var id = $(this).data("id");
   
-      var newDevourState = {
-        description: 1
+      var newComment = {
+        comment: "New comment here!"
       };
   
       // Send the PUT request.
       $.ajax("/api/genre/" + id, {
         type: "PUT",
-        data: newDevourState
+        data: newComment
       }).then(
         function() {
-          console.log("Burger description!");
+          console.log("Genre description!");
           // Reload the page to get the updated list
           location.reload();
         }
@@ -26,13 +26,14 @@ $(function() {
   
       var newGenre = {
         genre_name: $("#genreName").val().trim(),
-        description: "enter music description here" //GRAB DESCRIPTION HERE<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<!!!!!!!!!!!!!!
+        description: $("#genreDescription").val().trim(),
+        comment: $("#genreComment").val().trim()
       };
   
       // Send the POST request.
       $.ajax("/api/genre", {
         type: "POST",
-        data: newDescription
+        data: newGenre
       }).then(
         function() {
           console.log("created new genre");
