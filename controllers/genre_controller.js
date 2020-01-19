@@ -2,7 +2,7 @@ var express = require("express");
 
 var router = express.Router();
 
-// Import the model (burger.js) to use its database functions.
+// Import the model (genre.js) to use its database functions.
 var genre = require("../models/genre.js");
 
 // Create all our routes and set up logic within those routes where required.
@@ -34,20 +34,20 @@ router.post("/api/genre", function (req, res) {
     });
 });
 
-// router.put("/api/genre/:id", function (req, res) {
-//   var condition = "id = " + req.params.id;
+router.put("/api/genre/:id", function (req, res) {
+  var condition = "id = " + req.params.id;
 
-//   console.log("condition", condition);
+  console.log("condition", condition);
 
-//   genre.update({ description: req.body.description }, condition, function (result) {
-//     if (result.changedRows == 0) {
-//       // If no rows were changed, then the ID must not exist, so 404
-//       return res.status(404).end();
-//     } else {
-//       res.status(200).end();
-//     }
-//   });
-// });
+  genre.update({ show_genre: 1 }, condition, function (result) {
+    if (result.changedRows == 0) {
+      // If no rows were changed, then the ID must not exist, so 404
+      return res.status(404).end();
+    } else {
+      res.status(200).end();
+    }
+  });
+});
 
 // Export routes for server.js to use.
 module.exports = router;
