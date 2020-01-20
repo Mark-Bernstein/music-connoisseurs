@@ -5,9 +5,10 @@ USE genre_database;
 
 CREATE TABLE genre(
   id INTEGER AUTO_INCREMENT NOT NULL,
-  name VARCHAR(25),
+  genre_name VARCHAR(25),
   description VARCHAR(255),
   comment VARCHAR(255),
+  show_genre BOOLEAN DEFAULT false,
   PRIMARY KEY (id)
 );
 

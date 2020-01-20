@@ -60,7 +60,7 @@ var orm = {
     queryString += printQuestionMarks(vals.length);
     queryString += ") ";
 
-    console.log("creating burger (queryString)", queryString);
+    console.log("creating genre (queryString)", queryString);
 
     connection.query(queryString, vals, function(err, result) {
       if (err) {
@@ -70,7 +70,7 @@ var orm = {
       cb(result);
     });
   },
-  // An example of objColVals, condition would be {name: Bacon Burger, devoured: false}
+
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
@@ -79,7 +79,7 @@ var orm = {
     queryString += " WHERE ";
     queryString += condition;
 
-    console.log("updating burger (queryString)", queryString);
+    console.log("updating genre (queryString)", queryString);
     connection.query(queryString, function(err, result) {
       if (err) {
         console.log(err);

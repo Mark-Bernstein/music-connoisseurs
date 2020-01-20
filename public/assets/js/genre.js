@@ -73,7 +73,7 @@ $(function() {
     //     type: "DELETE"
     //   }).then(
     //     function() {
-    //       console.log("deleted burger", id);
+    //       console.log("deleted genre", id);
     //       // Reload the page to get the updated list
     //       location.reload();
     //     }
