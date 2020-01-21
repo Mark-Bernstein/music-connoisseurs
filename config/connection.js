@@ -8,8 +8,9 @@ var mysql = require("mysql");
 // } else {
 //   connection = mysql.createConnection({
 //     host: 'd6vscs19jtah8iwb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+//     port: 3306,
 //     user: 'rw0r6n2rfyde7biu',
-//     password: 'g92d2893hjdenecs',
+//     password: 'ei51yzta7qxt0n8w',
 //     database: 'uylkyjc9hkq1fcvy'
 //   })
 // }
