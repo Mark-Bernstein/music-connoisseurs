@@ -24,8 +24,8 @@ router.get("/genre", function (req, res) {
 
 
 router.post("/api/genre", function (req, res) {
-  genre.create(["genre_name", "description", "comment"],
-    [ req.body.genre_name, req.body.description, req.body.comment ], 
+  genre.create(["genre_name", "description", "comment", "show_genre"],
+    [req.body.genre_name, req.body.description, req.body.comment, req.body.show_genre],
     function (result) {
       // wrapper for orm.js that using MySQL insert callback will return a log to console,
       // render back to index with handle
@@ -48,6 +48,32 @@ router.put("/api/genre/:id", function (req, res) {
     }
   });
 });
+
+// router.put("/api/genre/:id", function (req, res) {
+//   var condition = "id = " + req.params.id;
+
+//   console.log("condition", condition);
+
+//   if (genre.show_genre == 0) {
+//     genre.update({ show_genre: 1 }, condition, function (result) {
+//       if (result.changedRows == 0) {
+//         // If no rows were changed, then the ID must not exist, so 404
+//         return res.status(404).end();
+//       } else {
+//         res.status(200).end();
+//       }
+//     });
+//   } else if (genre.show_genre == 1) {
+//     genre.update({ show_genre: 0 }, condition, function (result) {
+//       if (result.changedRows == 0) {
+//         // If no rows were changed, then the ID must not exist, so 404
+//         return res.status(404).end();
+//       } else {
+//         res.status(200).end();
+//       }
+//     });
+//   }
+// });
 
 // Export routes for server.js to use.
 module.exports = router;
