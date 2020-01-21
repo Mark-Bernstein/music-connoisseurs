@@ -1,16 +1,16 @@
 // Set up MySQL connection.
 var mysql = require("mysql");
 
-var connection;
+// var connection;
 
 // if (process.env.JAWSDB_URL) {
 //   connection = mysql.createConnection(process.send.JAWSDB_URL);
 // } else {
 //   connection = mysql.createConnection({
-//     host: 'lgg2gx1ha7yp2w0k.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-//     user: 'l4n74qw6ehr8f8zw',
-//     password: 'e3agnebpfd4a8jva',
-//     database: 'qurps1kmg9a1dnlp'
+//     host: 'd6vscs19jtah8iwb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+//     user: 'rw0r6n2rfyde7biu',
+//     password: 'g92d2893hjdenecs',
+//     database: 'uylkyjc9hkq1fcvy'
 //   })
 // }
 

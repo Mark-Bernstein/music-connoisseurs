@@ -1,21 +1,22 @@
 {
-  "name": "burger",
+  "name": "music-connoisseurs",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mark-Bernstein/burger.git"
+    "url": "git+https://github.com/Mark-Bernstein/music-connoisseurs.git"
   },
   "author": "Mark Bernstein",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mark-Bernstein/burger/issues"
+    "url": "https://github.com/Mark-Bernstein/burgmusic-connoisseurser/issues"
   },
-  "homepage": "https://github.com/Mark-Bernstein/burger#readme",
+  "homepage": "https://github.com/Mark-Bernstein/music-connoisseurs#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
