@@ -13,7 +13,7 @@ $(function () {
       data: newShowGenre
     }).then(
       function () {
-        console.log("Genre description!");
+        console.log("*******Genre description!");
         // Reload the page to get the updated list
         location.reload();
       }
@@ -28,12 +28,12 @@ $(function () {
     };
 
     // Send the PUT request.
-    $.ajax("/api/genre/" + id, {
+    $.ajax("/api/genre/hide/" + id, {
       type: "PUT",
       data: newShowGenre
     }).then(
       function () {
-        console.log("Genre description!");
+        console.log("*******Genre description!");
         // Reload the page to get the updated list
         location.reload();
       }
