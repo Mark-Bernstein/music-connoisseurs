@@ -44,6 +44,7 @@
           <br><br>
           <h3>
             {{#each genre}}
+
             <button type="submit" class="btn btn-outline-info showGenreBtn"
               data-id="{{this.id}}">{{genre_name}}</button>
             {{/each}}
@@ -67,14 +68,14 @@
             <br>
             <label for="addComment" class="left">Add Comment: </label>
             <input type="text" class="left" id="newComment" name="newComment">
-            <button type="submit" class="btn btn-outline-info showGenreBtn" data-id="{{this.id}}">Submit</button>
+            <button type="submit" class="btn btn-outline-info addCommentBtn" data-id="{{this.id}}">Submit</button>
             <button type="submit" class="btn btn-outline-info hideGenreBtn" data-id="{{this.id}}">Hide Genre</button>
             <hr>
             {{/if}}
             {{/each}}
           </ol>
 
-          <h2>Add a Genre:</h2>
+          <h2>Don't see your favorite Genre? Add it Here!</h2>
           <form class="create-form">
 
             <div class="form-group">
@@ -94,27 +95,12 @@
 
             <button type="submit" class="btn btn-outline-info" id="submitBtn">Submit</button>
           </form>
-          {{!-- <button type="button" id="metalBtn" class="btn btn-outline-info genrebtn">Metal</button>
-          <button type="button" id="jazzBtn" class="btn btn-outline-info genrebtn">Jazz</button>
-          <button type="button" id="punkBtn" class="btn btn-outline-info genrebtn">Punk</button>
-          <button type="button" id="hiphopBtn" class="btn btn-outline-info genrebtn">Hip Hop</button>
-          <button type="button" id="rockBtn" class="btn btn-outline-info genrebtn">Rock</button>
-          <button type="button" id="rbBtn" class="btn btn-outline-info genrebtn">R & B</button>
-          <button type="button" id="bluesBtn" class="btn btn-outline-info genrebtn">Blues</button>
-          <button type="button" id="houseBtn" class="btn btn-outline-info genrebtn">House</button>
-          <button type="button" id="classicalBtn" class="btn btn-outline-info genrebtn">Classical</button>
-          <button type="button" id="countryBtn" class="btn btn-outline-info genrebtn">Country</button>
-          <button type="button" id="reggaeBtn" class="btn btn-outline-info genrebtn">Reggae</button>
-          <button type="button" id="folkBtn" class="btn btn-outline-info genrebtn">Folk</button>
-          <button type="button" id="swingBtn" class="btn btn-outline-info genrebtn">Swing</button>
-          <button type="button" id="emoBtn" class="btn btn-outline-info genrebtn">Emo</button>
-          <button type="button" id="popBtn" class="btn btn-outline-info genrebtn">Pop</button> --}}
 
         </div>
         <div class="col-md-3"></div>
       </div>
     </div>
-    <footer>&copy; Team 2019</footer>
+    {{!-- <footer>&copy; Team 2019</footer> --}}
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/index.js" type="text/javascript"></script>
 </body>
