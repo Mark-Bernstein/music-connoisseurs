@@ -33,15 +33,15 @@
 <i class="fa fa-search"></i></button> -->
           <!----------------->
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Search for a genre" aria-label="Genre search"
+            {{!-- <input type="text" class="form-control" placeholder="Search for a genre" aria-label="Genre search"
               aria-describedby="searchBtn" id="get-genre">
             <div class="input-group-append">
               <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
-            </div>
+            </div> --}}
           </div>
           <div style="color: red; float: left;" class="invalid-message"></div>
 
-          <br><br>
+          {{!-- <br><br> --}}
           <h3>
             {{#each genre}}
 
@@ -63,6 +63,7 @@
               <h3 id="genre_data">Comments: </h3>
               <h3>{{comment}}</h3>
               <br>
+              <h3><a href="https://www.youtube.com/results?search_query={{genre_name}}" target="_blank" >Music Videos</a></h3>
             </h3>
             <br>
             <br>

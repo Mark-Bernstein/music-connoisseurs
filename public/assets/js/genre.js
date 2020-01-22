@@ -89,6 +89,24 @@ $(function () {
     var genre = getGenre.val().trim();
     console.log(genre);
 
+    // if (genre.toLowerCase() == genre_name.toLowerCase()) {
+    //   var newShowGenre = {
+    //     show_genre: true
+    //   };
+  
+    //   // Send the PUT request.
+    //   $.ajax("/api/genre/" + id, {
+    //     type: "PUT",
+    //     data: newShowGenre
+    //   }).then(
+    //     function () {
+    //       console.log("*******Genre description!");
+    //       // Reload the page to get the updated list
+    //       location.reload();
+    //     }
+    //   );
+    // }
+
 
     var message = document.querySelector(".invalid-message");
     if (genre === null || genre === "") {
